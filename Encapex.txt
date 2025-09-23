@@ -1,0 +1,53 @@
+class Students
+{
+	private String branch;
+	private String name;
+	private int age;
+	
+	public void setBranch(String b)
+	{
+		branch=b;
+	}
+	public void getBranch()
+	{
+		return branch;
+	}
+
+	public void setName(String n)
+	{
+		name=n;
+	}
+	public void getName()
+	{
+		return name;
+	}
+	public void setAge( int a)
+	{
+		if( a>0)
+		{
+			age=a;
+		}
+		else
+		{
+			System.out.println("Invalid age");
+		}
+	
+	}
+	public void getAge()
+	{
+		return age;
+	}
+}
+class Enapex
+{
+	public static void main(String[]args)
+	{
+		Students s= new Students();
+		s.branch("BSC");
+		s.name("chandu");
+		s.age(20);
+	}
+	System.out.println("branch : " +s.getBranch());
+	System.out.println("name : "+s.getName());
+	System.out.println("age : "+ s.getAge());
+}
