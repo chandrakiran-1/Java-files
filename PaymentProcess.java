@@ -1,0 +1,44 @@
+abstract class Payments
+{
+	abstract void pay(int amount);
+	
+	void receipt()
+	{
+		System.out.println(" the payment is success , the Bill is generated ");
+	}
+}
+class CreditCard extends Payments
+{	@Override
+	void pay(int amount)
+	{
+		System.out.println(" PAID " + amount + " by using Credit card ");
+	}
+}
+class UPI extends Payments
+{	@Override
+	void pay(int amount)
+	{
+		System.out.println(" PAID " + amount + " by using UPI method ");
+	}
+}
+class NetBanking extends Payments
+{	@Override
+	void pay(int amount)
+	{
+		System.out.println(" PAID " + amount + " by using NetBanking process ");
+	}
+}
+class PaymentProcess
+{	
+	public static void main(String[]args)
+	{
+		Payments p = new CreditCard();
+		Payments q = new UPI();
+		Payments r = new NetBanking();
+	p.pay(1000); p.receipt();
+	q.pay(2000); q.receipt();
+	r.pay(3000); r.receipt();
+	}
+}
+				
+		

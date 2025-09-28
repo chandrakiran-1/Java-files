@@ -1,33 +1,43 @@
 class SocialMedia
 {
-	String notification()
+	void NewNotification()
 	{
-		return " NewNotification ";
+		System.out.println("  You have a new notification ");
 	}
 }
 class WhatsApp extends SocialMedia
 {
-	@Override
-		String notification()
+	@Override	
+   		void NewNotification()
 		{
-			return " hello from jack, Whatsapp ";
+			System.out.println("WhatsApp : you have a message from Kiran ");
 		}
 }
 class Instagram extends SocialMedia
 {
 	@Override
-		String notification()
+		void NewNotification()
 		{
-			return " heyy ! from daniles , Instagram ";
+			System.out.println("Instagram : you have a message from Ram ");
+		}
+}
+class X extends SocialMedia
+{
+	@Override
+		void NewNotification()
+		{
+			System.out.println("X : you have a trending topic ");
 		}
 }
 class OnlineMedia
 {
-	public static void main(String []args)
+	public static void main (String []args)
 	{
-		SocialMedia s = new WhatsApp();
-		SocialMedia q= new Instagram();
-	System.out.println(" one message from WhatsApp : " + s.notification());
-	System.out.println(" one message form Instagram : " + q.notification());
+		SocialMedia s= new WhatsApp();
+		SocialMedia a = new Instagram();
+		SocialMedia q= new X();
+	s.NewNotification();
+	a.NewNotification();
+	q.NewNotification();
 	}
 }
