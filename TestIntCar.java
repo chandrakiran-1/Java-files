@@ -8,12 +8,12 @@ interface MusicSystem
 }
 class TestIntCar implements Engine, MusicSystem
 {
-	  public void startEngine()
+	 void StartEngine()
 	{
 		System.out.println(" Engine started ");
 	}
 	 
-	public  void startMusic()
+	 void StartMusic()
 	{
 		System.out.println(" playing music ");
 	}
@@ -23,7 +23,7 @@ public class Main
 	public static void main(String[]args)
 	{
 		TestIntCar car = new TestIntCar();
-		car.startEngine();
-		car.startMusic();
+		car.StartEngine();
+		car.StartMusic();
 	}
 }
